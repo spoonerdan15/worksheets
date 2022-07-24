@@ -1,0 +1,21 @@
+
+{% extends "veed/base.html" %}
+{% block title %}Sheet{% endblock %}
+{% block content %}
+    <table>
+       <tr>
+        <td><p><strong>|id|</strong></p></td>
+           <td><p><strong>|Номер заказа|</strong></p></td>
+        <td><p><strong>|Стоимость|</strong></p></td>
+        <td><p><strong>|Срок поставки|</strong></p></td>
+        </tr>
+      {% for i in sheets %}
+      <tr>
+         <td>|{{ i.num }}|</td>
+         <td>{{ i.order }}</td>
+         <td>{{ i.price }}</td>
+          <td>{{ i.date }}</td>
+      </tr>
+      {% endfor %}
+   </table>
+{% endblock %}
